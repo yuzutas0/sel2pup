@@ -4,16 +4,21 @@ The Converter From `xxx.side file recorded by Selenium IDE` to `xxx.js file with
 
 # Usage
 
+```
+workspace
+|_ /sel2pup
+```
+
 1. Track your operation by SeleniumIDE
 2. Export xxx.side file by SeleniumIDE
-3. Execute command `python ./converters/parser.py -i xxx.side` to export `xxx.yml` file
+3. Execute command `python ./sel2pup/converters/parser.py -i xxx.side` to export `xxx.yml` file
 4. Replace secret information in `xxx.yml` with `{DOTENV_NAME}`
-5. Execute command `python ./converters/dotenv.py -i xxx.yml` to export `.env` file
+5. Execute command `python ./sel2pup/converters/dotenv.py -i xxx.yml` to export `.env` file
 6. Write down secret information in `.env` file -- it'll be not managed by Git
-7. Execute command `python ./converters/generator.py -i xxx.yml` to export `xxx.js` file
+7. Execute command `python ./sel2pup/converters/generator.py -i xxx.yml` to export `xxx.js` file
 8. Customize source code `xxx.js` as you like -- e.g. loop, using custom variables, getting DOM values
 9. Execute command `node xxx.js` with Puppeteer
-10. Execute command `find ./screenshot/*.png | xargs open` to check images
+10. Execute command `find ./sel2pup/screenshot/*.png | xargs open` to check images
 
 # Requirements
 

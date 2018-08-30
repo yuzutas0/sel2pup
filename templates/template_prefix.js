@@ -31,7 +31,7 @@ var index = 0
 const screenShotPath = () => {
   number = ("0" + index).slice(-2);
   index++;
-  return './screenshot/' + projectName + '_' + number + '.png';
+  return './sel2pup/screenshot/' + projectName + '_' + number + '.png';
 }
 
 require('dotenv').config();

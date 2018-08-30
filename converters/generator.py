@@ -92,11 +92,11 @@ for k, v in data.items():
   scripts.append('')
 
 prefix = ''
-with open('./templates/template_prefix.js') as f:
+with open('./sel2pup/templates/template_prefix.js') as f:
   prefix = f.read()
 
 suffix = ''
-with open('./templates/template_suffix.js') as f:
+with open('./sel2pup/templates/template_suffix.js') as f:
   suffix = f.read()
 
 output_file_name = input_file_name.split('.')[0]
